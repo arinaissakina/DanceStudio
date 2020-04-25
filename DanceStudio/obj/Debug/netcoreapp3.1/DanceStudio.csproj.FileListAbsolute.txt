@@ -173,12 +173,12 @@
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Member/Details.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Member/Edit.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Member/Index.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Main/Index.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Create.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Delete.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Details.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Edit.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Index.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Main/Index.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs

@@ -22,7 +22,7 @@ namespace DanceStudio.Controllers
         // GET: GroupMember
         public async Task<IActionResult> Index()
         {
-            var danceStudioContext = _context.GroupMembers.Include(g => g.Member);
+            var danceStudioContext = _context.GroupMembers.Include(g => g.Group).Include(g => g.Member);
             return View(await danceStudioContext.ToListAsync());
         }
 
@@ -35,6 +35,7 @@ namespace DanceStudio.Controllers
             }
 
             var groupMember = await _context.GroupMembers
+                .Include(g => g.Group)
                 .Include(g => g.Member)
                 .FirstOrDefaultAsync(m => m.GroupId == id);
             if (groupMember == null)
@@ -48,6 +49,7 @@ namespace DanceStudio.Controllers
         // GET: GroupMember/Create
         public IActionResult Create()
         {
+            ViewData["GroupId"] = new SelectList(_context.Groups, "Id", "Name");
             ViewData["MemberId"] = new SelectList(_context.Members, "Id", "Name");
             return View();
         }
@@ -65,6 +67,7 @@ namespace DanceStudio.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["GroupId"] = new SelectList(_context.Groups, "Id", "Name", groupMember.GroupId);
             ViewData["MemberId"] = new SelectList(_context.Members, "Id", "Name", groupMember.MemberId);
             return View(groupMember);
         }
@@ -82,6 +85,7 @@ namespace DanceStudio.Controllers
             {
                 return NotFound();
             }
+            ViewData["GroupId"] = new SelectList(_context.Groups, "Id", "Name", groupMember.GroupId);
             ViewData["MemberId"] = new SelectList(_context.Members, "Id", "Name", groupMember.MemberId);
             return View(groupMember);
         }
@@ -118,6 +122,7 @@ namespace DanceStudio.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["GroupId"] = new SelectList(_context.Groups, "Id", "Name", groupMember.GroupId);
             ViewData["MemberId"] = new SelectList(_context.Members, "Id", "Name", groupMember.MemberId);
             return View(groupMember);
         }
@@ -131,6 +136,7 @@ namespace DanceStudio.Controllers
             }
 
             var groupMember = await _context.GroupMembers
+                .Include(g => g.Group)
                 .Include(g => g.Member)
                 .FirstOrDefaultAsync(m => m.GroupId == id);
             if (groupMember == null)

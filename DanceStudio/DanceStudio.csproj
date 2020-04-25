@@ -11,4 +11,12 @@
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\GroupMember\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\GroupMember\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\GroupMember\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\GroupMember\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\GroupMember\Index.cshtml" />
+    </ItemGroup>
+
 </Project>

@@ -40,11 +40,13 @@ namespace DanceStudio.Data
 
             modelBuilder.Entity<GroupMember>()
                 .HasOne(sc => sc.Group)
-                .WithMany(p => p.GroupMembers);
+                .WithMany(p => p.GroupMembers)
+                .HasForeignKey(sc => sc.GroupId);
 
             modelBuilder.Entity<GroupMember>()
                 .HasOne(sc => sc.Member)
-                .WithMany(p => p.GroupMembers);
+                .WithMany(p => p.GroupMembers)
+                .HasForeignKey(sc => sc.MemberId);
 
         }
     }
