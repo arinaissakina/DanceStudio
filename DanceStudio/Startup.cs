@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DanceStudio.Data;
+using DanceStudio.Services.Coaches;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -22,7 +23,9 @@ namespace DanceStudio
             {
                 options.UseSqlite("Filename=danceStudio.db");
             });
-            services.AddMvc(option => option.EnableEndpointRouting = false);          
+            services.AddMvc(option => option.EnableEndpointRouting = false); 
+            services.AddScoped<CoachService>();
+            services.AddScoped<ICoachRepository, CoachRepository>();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
