@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DanceStudio.Migrations
 {
     [DbContext(typeof(DanceStudioContext))]
-    [Migration("20200425080524_first")]
+    [Migration("20200502165828_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,10 @@ namespace DanceStudio.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -45,7 +49,8 @@ namespace DanceStudio.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasMaxLength(20);
 
                     b.HasKey("Id");
 
@@ -66,7 +71,8 @@ namespace DanceStudio.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasMaxLength(20);
 
                     b.HasKey("Id");
 
@@ -90,8 +96,6 @@ namespace DanceStudio.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("GroupId", "MemberId");
-
-                    b.HasIndex("CourseId");
 
                     b.HasIndex("MemberId");
 
@@ -136,7 +140,9 @@ namespace DanceStudio.Migrations
                 {
                     b.HasOne("DanceStudio.Models.Group", "Group")
                         .WithMany("GroupMembers")
-                        .HasForeignKey("CourseId");
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("DanceStudio.Models.Member", "Member")
                         .WithMany("GroupMembers")

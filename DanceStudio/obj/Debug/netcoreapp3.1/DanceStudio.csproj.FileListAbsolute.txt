@@ -150,11 +150,6 @@
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/DanceStudio.TagHelpers.input.cache
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/DanceStudio.TagHelpers.output.cache
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/DanceStudio.RazorCoreGenerate.cache
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Create.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Delete.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Details.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Edit.cshtml.g.cs
-/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Index.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/DanceStudio.RazorTargetAssemblyInfo.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/DanceStudio.Views.pdb
@@ -182,3 +177,8 @@
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Details.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Edit.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/GroupMember/Index.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Create.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Delete.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Details.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Edit.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Coach/Index.cshtml.g.cs

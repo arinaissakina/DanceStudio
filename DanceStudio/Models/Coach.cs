@@ -1,6 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DanceStudio.Models
 {
@@ -17,9 +19,16 @@ namespace DanceStudio.Models
         public string Name { get; set; }
         
         [Required]
+        [EmailAddress]
+        [Remote(action: "VerifyEmail", controller: "Coach")]
+        public string Email { get; set; }
+        
+        [Required]
+        [NotContainsLetters]
         public string PhoneNumber { get; set; }
         
         public Group Group { get; set; }
 
     }
+    
 }

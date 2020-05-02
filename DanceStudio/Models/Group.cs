@@ -16,6 +16,7 @@ namespace DanceStudio.Models
         public long Id { get; set; }
 
         [Required]
+        [StringLength(15, ErrorMessage = "Group name can't be more than 15 symbols.")]
         [DisplayName("Group Name")]
         public string Name { get; set; }
 

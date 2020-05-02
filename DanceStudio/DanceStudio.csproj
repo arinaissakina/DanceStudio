@@ -17,6 +17,11 @@
       <_ContentIncludedByDefault Remove="Views\GroupMember\Details.cshtml" />
       <_ContentIncludedByDefault Remove="Views\GroupMember\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Views\GroupMember\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Coach\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Coach\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Coach\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Coach\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Coach\Index.cshtml" />
     </ItemGroup>
 
 </Project>

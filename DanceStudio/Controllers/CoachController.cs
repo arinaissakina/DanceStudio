@@ -7,17 +7,32 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DanceStudio.Data;
 using DanceStudio.Models;
+using DanceStudio.Services.Coaches;
 
 namespace DanceStudio.Controllers
 {
     public class CoachController : Controller
     {
         private readonly DanceStudioContext _context;
+        private readonly CoachService _coachService;
 
-        public CoachController(DanceStudioContext context)
+        public CoachController(DanceStudioContext context, CoachService coachService)
         {
             _context = context;
+            _coachService = coachService;
         }
+        
+        [AcceptVerbs("GET", "POST")]
+        public IActionResult VerifyEmail(string email)
+        {
+            if (_coachService.VerifyEmail(email))
+            {
+                return Json($"Email {email} is already in use.");
+            }
+
+            return Json(true);
+        }
+
 
         // GET: Coach
         public async Task<IActionResult> Index()
@@ -54,7 +69,7 @@ namespace DanceStudio.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,PhoneNumber")] Coach coach)
+        public async Task<IActionResult> Create([Bind("Id,Name,Email,PhoneNumber")] Coach coach)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +101,7 @@ namespace DanceStudio.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Id,Name,PhoneNumber")] Coach coach)
+        public async Task<IActionResult> Edit(long id, [Bind("Id,Name,Email,PhoneNumber")] Coach coach)
         {
             if (id != coach.Id)
             {

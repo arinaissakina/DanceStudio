@@ -13,6 +13,7 @@ namespace DanceStudio.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -26,7 +27,7 @@ namespace DanceStudio.Migrations
                 {
                     Id = table.Column<long>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(maxLength: 20, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -53,7 +54,7 @@ namespace DanceStudio.Migrations
                 {
                     Id = table.Column<long>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(maxLength: 20, nullable: false),
                     CoachId = table.Column<long>(nullable: false),
                     DanceId = table.Column<long>(nullable: false)
                 },
@@ -86,11 +87,11 @@ namespace DanceStudio.Migrations
                 {
                     table.PrimaryKey("PK_GroupMembers", x => new { x.GroupId, x.MemberId });
                     table.ForeignKey(
-                        name: "FK_GroupMembers_Groups_CourseId",
-                        column: x => x.CourseId,
+                        name: "FK_GroupMembers_Groups_GroupId",
+                        column: x => x.GroupId,
                         principalTable: "Groups",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_GroupMembers_Members_MemberId",
                         column: x => x.MemberId,
@@ -98,11 +99,6 @@ namespace DanceStudio.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_GroupMembers_CourseId",
-                table: "GroupMembers",
-                column: "CourseId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_GroupMembers_MemberId",

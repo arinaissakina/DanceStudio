@@ -22,8 +22,8 @@
           <e p="DanceStudioContext.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20200425080524_first.cs" t="Include" />
-          <e p="20200425080524_first.Designer.cs" t="Include" />
+          <e p="20200502165828_first.cs" t="Include" />
+          <e p="20200502165828_first.Designer.cs" t="Include" />
           <e p="DanceStudioContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -37,12 +37,20 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="DanceStudio.AssemblyInfo.cs" t="Include" />
+              <e p="DanceStudio.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="Coaches" t="Include">
+            <e p="CoachRepository.cs" t="Include" />
+            <e p="CoachService.cs" t="Include" />
+            <e p="ICoachRepository.cs" t="Include" />
+          </e>
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
