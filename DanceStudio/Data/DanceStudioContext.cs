@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DanceStudio.Data
 {
-    public class DanceStudioContext : DbContext
+    public class DanceStudioContext : DbContext 
     {
         public DanceStudioContext(DbContextOptions options) : base(options)
         {
