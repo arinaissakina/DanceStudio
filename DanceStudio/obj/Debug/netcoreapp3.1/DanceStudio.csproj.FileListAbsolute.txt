@@ -195,9 +195,11 @@
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/DanceStudio.MvcApplicationPartsAssemblyInfo.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Logout.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Register.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/_ViewImports.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
 /Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
+/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/Account/Profile.cshtml.g.cs

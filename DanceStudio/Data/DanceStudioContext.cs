@@ -1,12 +1,14 @@
 using System;
 using DanceStudio.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DanceStudio.Data
 {
-    public class DanceStudioContext : DbContext 
+    public class DanceStudioContext : IdentityDbContext<IdentityUser>
     {
-        public DanceStudioContext(DbContextOptions options) : base(options)
+        public DanceStudioContext(DbContextOptions<DanceStudioContext> options) : base(options)
         {
         }
         
@@ -18,6 +20,10 @@ namespace DanceStudio.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.Entity<IdentityUser>() 
+                .ToTable( "Users" );
             
             // One to One
             
@@ -49,5 +55,6 @@ namespace DanceStudio.Data
                 .HasForeignKey(sc => sc.MemberId);
 
         }
+
     }
 }

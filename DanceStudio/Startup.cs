@@ -52,6 +52,9 @@ namespace DanceStudio
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+            
             app.UseMvc(routes =>
             {
 
@@ -60,7 +63,6 @@ namespace DanceStudio
                     template: "{controller=Main}/{action=Index}/{id?}");
             });
             
-            // FiRST VERSION
 
             app.UseStaticFiles();
             
@@ -69,8 +71,7 @@ namespace DanceStudio
             app.UseRouting();
             
             // identity
-            app.UseAuthentication();
-            app.UseAuthorization();
+            
         }
     }
 }

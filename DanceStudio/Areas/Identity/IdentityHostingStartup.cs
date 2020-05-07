@@ -1,5 +1,5 @@
 using System;
-using DanceStudio.Areas.Identity.Data;
+using DanceStudio.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -16,8 +16,7 @@ namespace DanceStudio.Areas.Identity
         {
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<DanceStudioContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("DanceStudioContextConnection")));
+                    options.UseSqlite("Filename=danceStudio.db"));
 
                 //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     //.AddEntityFrameworkStores<DanceStudioContext>();
