@@ -22,6 +22,10 @@ namespace DanceStudio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -89,8 +93,6 @@ namespace DanceStudio.Migrations
 
                     b.HasKey("GroupId", "MemberId");
 
-                    b.HasIndex("CourseId");
-
                     b.HasIndex("MemberId");
 
                     b.ToTable("GroupMembers");
@@ -134,7 +136,9 @@ namespace DanceStudio.Migrations
                 {
                     b.HasOne("DanceStudio.Models.Group", "Group")
                         .WithMany("GroupMembers")
-                        .HasForeignKey("CourseId");
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("DanceStudio.Models.Member", "Member")
                         .WithMany("GroupMembers")

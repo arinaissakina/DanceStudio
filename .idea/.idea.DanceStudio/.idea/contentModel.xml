@@ -8,6 +8,28 @@
       <e p="DanceStudio" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
+        <e p="Areas" t="Include">
+          <e p="Identity" t="Include">
+            <e p="Data" t="Include">
+              <e p="DanceStudioIdentityDbContext.cs" t="Include" />
+            </e>
+            <e p="IdentityHostingStartup.cs" t="Include" />
+            <e p="Pages" t="Include">
+              <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+              <e p="_ViewImports.cshtml" t="Include" />
+              <e p="_ViewStart.cshtml" t="Include" />
+              <e p="Account" t="Include">
+                <e p="_ViewImports.cshtml" t="Include" />
+                <e p="Login.cshtml" t="Include" />
+                <e p="Login.cshtml.cs" t="Include" />
+                <e p="Logout.cshtml" t="Include" />
+                <e p="Logout.cshtml.cs" t="Include" />
+                <e p="Register.cshtml" t="Include" />
+                <e p="Register.cshtml.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="CoachController.cs" t="Include" />
@@ -25,6 +47,8 @@
         <e p="Migrations" t="Include">
           <e p="20200425080524_first.cs" t="Include" />
           <e p="20200425080524_first.Designer.cs" t="Include" />
+          <e p="20200508052148_CreateIdentitySchema.cs" t="Include" />
+          <e p="20200508052148_CreateIdentitySchema.Designer.cs" t="Include" />
           <e p="DanceStudioContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -46,6 +70,7 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="ScaffoldingReadMe.txt" t="Include" />
         <e p="Services" t="Include">
           <e p="Coaches" t="Include">
             <e p="CoachRepository.cs" t="Include" />
@@ -97,6 +122,7 @@
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
+            <e p="_LoginPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
         </e>
