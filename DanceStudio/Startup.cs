@@ -69,9 +69,7 @@ namespace DanceStudio
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            
-            // identity
-            
+
         }
     }
 }
