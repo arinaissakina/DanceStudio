@@ -3,52 +3,45 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Hello from view</title>
+    <title>Dance Studio</title>
     <link rel="stylesheet" href="~/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
 </head>
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<br/>
 <div class="container">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <strong class="title">Dance Studio</strong>
             </a>
-
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <div class="navbar-item">
-                    @Html.ActionLink("Coaches", "Index", "Coach", null, new { @class = "nav-link" })
-                </div>
-                <div class="navbar-item">
-                    @Html.ActionLink("Dances", "Index", "Dance", null, new { @class = "nav-link" })
-                </div>
-                <div class="navbar-item">
-                    @Html.ActionLink("Groups", "Index", "Group", null, new { @class = "nav-link" })
-                </div>
-                <div class="navbar-item">
-                    @Html.ActionLink("Members", "Index", "Member", null, new { @class = "nav-link" })
-                </div>
-                <div class="navbar-item">
-                    @Html.ActionLink("Group Members", "Index", "GroupMember", null, new { @class = "nav-link" })
-                </div>
+        <div class="navbar-start">
+            <div class="navbar-item">
+                @Html.ActionLink("Coaches", "Index", "Coach", null, new {@class = "nav-link"})
             </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">                            
-                    </div>
-                </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Dances", "Index", "Dance", null, new {@class = "nav-link"})
             </div>
-            <partial name="_LoginPartial" />
+            <div class="navbar-item">
+                @Html.ActionLink("Groups", "Index", "Group", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Members", "Index", "Member", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Group Members", "Index", "GroupMember", null, new {@class = "nav-link"})
+            </div>
         </div>
-
+        <partial name="_LoginPartial"/>
     </nav>
 </div>
 
@@ -56,5 +49,36 @@
     @RenderBody()
 </div>
 @RenderSection("Scripts", required: false)
+
+<footer class="footer">
+    <div class="level">
+        <div class="level-left">
+            <div class="level-item"><a class="title is-4" href="/">Dance Studio</a></div>
+        </div>
+        <div class="level-right">
+            <div class="navbar-item">
+                @Html.ActionLink("Coaches", "Index", "Coach", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Dances", "Index", "Dance", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Groups", "Index", "Group", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Members", "Index", "Member", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Group Members", "Index", "GroupMember", null, new {@class = "nav-link"})
+            </div></div>
+    </div>
+    <hr>
+    <div class="columns">
+
+        <div class="column has-text-centered has-text-right-tablet">
+            <p class="subtitle is-6">&copy; 2020 Dance Studio.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

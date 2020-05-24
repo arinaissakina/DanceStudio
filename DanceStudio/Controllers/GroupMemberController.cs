@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DanceStudio.Data;
 using DanceStudio.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DanceStudio.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class GroupMemberController : Controller
     {
         private readonly DanceStudioContext _context;

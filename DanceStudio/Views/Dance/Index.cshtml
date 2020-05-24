@@ -4,14 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<br/>
+
+<p class="subtitle is-3">Dances</p>
 
 <p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+    <a asp-action="Create" class="button is-primary is-outlined">Create New</a>
+</p><br/>
+<table class="table is-bordered is-striped is-fullwidth">
     <thead>
-        <tr>
+        <tr class="th is-selected">
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -25,11 +27,28 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="button is-link">
+                            Edit
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="button">
+                            Details
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="button is-danger">
+                            Delete
+                        </a>
+                    </p>
+                </div>
+                
+                
             </td>
         </tr>
 }
     </tbody>
 </table>
+<br/>
