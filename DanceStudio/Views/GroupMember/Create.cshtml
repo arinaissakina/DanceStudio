@@ -4,32 +4,39 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>GroupMember</h4>
+<br/>
+<p class="title is-1 is-spaced">Create</p>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="GroupId" class="control-label"></label>
-                <select asp-for="GroupId" class ="form-control" asp-items="ViewBag.GroupId"></select>
+                <label asp-for="GroupId" class="control-label"></label>&nbsp;
+                <br/>
+                <div class="select is-primary">
+                    <select asp-for="GroupId" class ="select is-primary" asp-items="ViewBag.GroupId"></select>
+                </div>
             </div>
+            <br/>
             <div class="form-group">
                 <label asp-for="MemberId" class="control-label"></label>
-                <select asp-for="MemberId" class ="form-control" asp-items="ViewBag.MemberId"></select>
-            </div>
+                <br/>
+                <div class="select is-primary">
+                    <select asp-for="MemberId" class ="select is-primary" asp-items="ViewBag.MemberId"></select>
+                </div>
+                </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="button is-primary is-rounded" style="float: right"  />
             </div>
         </form>
     </div>
 </div>
 
+<br/><br/><br/>
 <div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <a asp-action="Index" class="button is-rounded">Back to List</a>
+</div><br/>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

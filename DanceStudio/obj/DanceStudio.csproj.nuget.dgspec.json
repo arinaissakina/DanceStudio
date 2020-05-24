@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/arina/RiderProjects/DanceStudio/DanceStudio/DanceStudio.csproj": {}
+    "/Users/busakov/RiderProjects/Dance_Studio/DanceStudio/DanceStudio.csproj": {}
   },
   "projects": {
-    "/Users/arina/RiderProjects/DanceStudio/DanceStudio/DanceStudio.csproj": {
+    "/Users/busakov/RiderProjects/Dance_Studio/DanceStudio/DanceStudio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arina/RiderProjects/DanceStudio/DanceStudio/DanceStudio.csproj",
+        "projectUniqueName": "/Users/busakov/RiderProjects/Dance_Studio/DanceStudio/DanceStudio.csproj",
         "projectName": "DanceStudio",
-        "projectPath": "/Users/arina/RiderProjects/DanceStudio/DanceStudio/DanceStudio.csproj",
-        "packagesPath": "/Users/arina/.nuget/packages/",
-        "outputPath": "/Users/arina/RiderProjects/DanceStudio/DanceStudio/obj/",
+        "projectPath": "/Users/busakov/RiderProjects/Dance_Studio/DanceStudio/DanceStudio.csproj",
+        "packagesPath": "/Users/busakov/.nuget/packages/",
+        "outputPath": "/Users/busakov/RiderProjects/Dance_Studio/DanceStudio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/arina/.nuget/NuGet/NuGet.Config"
+          "/Users/busakov/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,14 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<br/>
+<p class="subtitle is-3">Group Members</p>
 
 <p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+    <a asp-action="Create" class="button is-primary is-outlined">Create New</a>
+</p><br/>
+<table class="table is-bordered is-striped is-fullwidth">
     <thead>
-        <tr>
+        <tr class="th is-selected">
             <th>
                 @Html.DisplayNameFor(model => model.Group)
             </th>
@@ -39,3 +40,4 @@
 }
     </tbody>
 </table>
+<br/>

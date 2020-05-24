@@ -3,22 +3,23 @@
 @{
     ViewData["Title"] = "Details";
 }
+<br/>
+<p class="title is-1 is-spaced">Details</p>
 
-<h1>Details</h1>
 
 <div>
-    <h4>Dance</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class = "subtitle is-5">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "title is-3">
             @Html.DisplayFor(model => model.Name)
         </dd>
     </dl>
-</div>
+</div><br/>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="button is-link is-rounded">Edit</a> 
+    <a asp-action="Index" class="button is-rounded">Back to List</a>
 </div>
+<br/>
