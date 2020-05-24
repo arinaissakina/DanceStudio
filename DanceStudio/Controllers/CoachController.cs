@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using DanceStudio.Data;
 using DanceStudio.Models;
 using DanceStudio.Services.Coaches;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DanceStudio.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CoachController : Controller
     {
         private readonly DanceStudioContext _context;

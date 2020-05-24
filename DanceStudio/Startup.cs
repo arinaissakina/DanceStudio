@@ -18,9 +18,30 @@ namespace DanceStudio
     public class Startup
     {
         public Startup(IConfiguration configuration)
-        {    
+        {
             Configuration = configuration;
         }
+
+        private async Task CreateUserRoles(IServiceProvider serviceProvider)
+        {
+            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+            IdentityResult roleResult;
+            //Adding Admin Role
+            var roleCheck = await RoleManager.RoleExistsAsync("Admin");
+            if (!roleCheck)
+            {
+                //create the roles and seed them to the database
+                roleResult = await RoleManager.CreateAsync(new IdentityRole("Admin"));
+            }
+
+            //Assign Admin role to the main User here we have given our newly registered 
+            //login id for Admin management
+            IdentityUser user = await UserManager.FindByEmailAsync("admin@email.com");
+            await UserManager.AddToRoleAsync(user, "Admin");
+        }
+
         
         public IConfiguration Configuration { get; }
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -38,6 +59,7 @@ namespace DanceStudio
             
             // identity
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<DanceStudioContext>();
             
             services.AddControllersWithViews();
@@ -45,7 +67,7 @@ namespace DanceStudio
         }
         
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -55,6 +77,7 @@ namespace DanceStudio
             app.UseAuthentication();
             app.UseAuthorization();
             
+            
             app.UseMvc(routes =>
             {
 
@@ -62,6 +85,8 @@ namespace DanceStudio
                     name: "default",
                     template: "{controller=Main}/{action=Index}/{id?}");
             });
+            
+            CreateUserRoles(serviceProvider).Wait();
             
 
             app.UseStaticFiles();
