@@ -64,6 +64,11 @@
       <UpToDateCheckInput Remove="Views\GroupMember\Details.cshtml" />
       <UpToDateCheckInput Remove="Views\GroupMember\Edit.cshtml" />
       <UpToDateCheckInput Remove="Views\GroupMember\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Coach\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Coach\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Coach\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Coach\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Coach\Index.cshtml" />
     </ItemGroup>
 
 </Project>
